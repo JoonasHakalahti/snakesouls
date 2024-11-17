@@ -1,0 +1,51 @@
+Muistiinpanoja kickoffista
+
+Peli-idea
+Matopeli, kun mato menee  ja kerää palloja niin se kasvaa. Kun mato törmää itseensä tai seinään niin peli päättyy.
+
+Speksejä
+2D
+Mato liikkuu ilman gridiä
+Kiinteät seinät
+Pallo tulee kentälle satunnaiseen saavutettavaan paikkaan
+Pelialue kooltaan (määritetään muuttujiin)
+Madon koko (madon nopeus, kääntymisnopeus, aloituspituus ja pituus kuinka paljon kasvaa per syöty pallo)
+-- Ei saa tulle seinän/esteen sisälle eikä kartan ulkopuolelle
+UI
+-- Highscore näyttö (3 parasta peliä)
+-- Aloitusmenu (Aloita peli, vaikaustaso valinta, Quit game)
+-- Pelin aikana, menuun paluu
+-- Kun peli päättyy highscore nimi kysely ja sen jälkeen uuden pelin aloitus tai menuun paluu
+
+
+Add-on
+Lisää kenttiä
+Ääniä
+Eri vaikeustasoja, nopeampi mato ja enemmän pisteitä per pallo
+-- Darksouls vaikeustaso, välibossi ja kerätään nuotioita. You died viesti kun peli päättyy 😄
+Jos pelaaja saa tarpeeksi ison scoren niin voi saada erilaisen mato skinin
+
+Työnjakoa
+@Joonas Hakalahti @Joel Puolakanaho Git-workflow
+@kaikki Idea esitys ja Powerpoint
+@Jayppa Pelialueen luonti ja grafiikka/assetit
+@Joonas Hakalahti @Kim Purojärvi UI&UX Käyttöliittymä
+@Peter Villa Madon liikkuminen
+@Matias Törmänen Kerättävien pallojen luonti kentälle
+@Matias Törmänen Pallojen keräys
+@Petri Pihlajamaa Tietojen lähetys serverille Unityssä
+@Petri Pihlajamaa PHP-serveri, tietokanta ja tietojen tallennus 
+
+
+
+11.11.2024 kokous
+Matias tehnyt ruoka scriptiä. Ruuan synnyttäminen onnistuu mutta niitä ei saa loppumaan joten näyttö täyttyy. /tämä ikuinen looppi on nyt saatu lopppumaan, olen testaillut manuaalisesti ja uusi ruoka ilmestyy aina space-painalluksella, vanha häviää. 
+
+Peter työskennellyt liikkumis scriptin tekoa.
+
+Kim tehnyt UI kuvan ja tarvisi vähän enemmän sisältöö testaamista varten.
+
+Petri tehny serveri puolen jo toimimaan. Alkaa työskentelemään Unity vastaanottavaa osaa.
+
+Keskulteltiin pisteidin sijainnista UI:sta ja muistakin mahdollisista vaihtoehdoista.
+Varmistettiin versio kontrolli ja keskusteltiin että kaiken voi pushata githubissa suoraan mainiin kun kaikki työstää eri aiheita (ei tarvitse tehdä brancheja).
