@@ -39,7 +39,7 @@ Työnjakoa
 
 
 11.11.2024 kokous
-Matias tehnyt ruoka scriptiä. Ruuan synnyttäminen onnistuu mutta niitä ei saa loppumaan joten näyttö täyttyy.
+Matias tehnyt ruoka scriptiä. Ruuan synnyttäminen onnistuu mutta niitä ei saa loppumaan joten näyttö täyttyy. /tämä ikuinen looppi on nyt saatu lopppumaan, olen testaillut manuaalisesti ja uusi ruoka ilmestyy aina space-painalluksella, vanha häviää. 
 
 Peter työskennellyt liikkumis scriptin tekoa.
 
