@@ -10,6 +10,7 @@ public class MainMenuScript : MonoBehaviour
     {
      
         SceneManager.sceneLoaded += OnSceneLoaded;
+        Time.timeScale = 0; // Pysäytä peli
     }
 
     void OnDestroy()
@@ -26,6 +27,7 @@ public class MainMenuScript : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("Snake");
+        Time.timeScale = 1; // Käynnistä peli
     }
   
     public void QuitGame()
