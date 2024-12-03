@@ -35,6 +35,8 @@ public class SnakeManager : MonoBehaviour
         // Lisää uusi kehon osa madon viimeiseen paikkaan.
         GameObject lastPart = snakeBody[snakeBody.Count - 1];
         Vector3 spawnPosition = lastPart.transform.position - lastPart.transform.right * distanceBetween;
+        float offset = 0.1f; //offset, jotta collision ei tule luodessa kehon osaa.
+        spawnPosition += lastPart.transform.up * offset;
         GameObject newBodyPart = Instantiate(snakeBodyPrefab, spawnPosition, lastPart.transform.rotation);
         newBodyPart.name = $"BodyPart{snakeBody.Count}";
         snakeBody.Add(newBodyPart);
@@ -58,8 +60,8 @@ public class SnakeManager : MonoBehaviour
             GameObject previousPart = snakeBody[i - 1];
             GameObject currentPart = snakeBody[i];
             Vector3 targetPosition = previousPart.transform.position - previousPart.transform.right * distanceBetween;
-            currentPart.transform.position = Vector3.Slerp(currentPart.transform.position, targetPosition, 0.5f);
-            currentPart.transform.rotation = Quaternion.Slerp(currentPart.transform.rotation, previousPart.transform.rotation, 0.5f);
+            currentPart.transform.position = Vector3.Lerp(currentPart.transform.position, targetPosition, 0.1f);
+            currentPart.transform.rotation = Quaternion.Lerp(currentPart.transform.rotation, previousPart.transform.rotation, 0.1f);
         }
     }
 

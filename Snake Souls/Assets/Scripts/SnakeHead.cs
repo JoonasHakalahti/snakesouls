@@ -45,7 +45,7 @@ public class SnakeHead : MonoBehaviour
         {
             EndGame("Game Over!");
         }
-        else if (collision.CompareTag("BodyPart")) // Jos osuu omaan kehoon
+        else if (collision.CompareTag("Body")) // Jos osuu omaan kehoon
         {
             EndGame("Game Over!");
         }

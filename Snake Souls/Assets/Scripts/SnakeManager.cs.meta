@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: ced5775ab31e3f04ab012af66c683105
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - snakeHeadPrefab: {fileID: 4571265031877804514, guid: cf5b311afc1de6a429735eab00d587fa, type: 3}
+  - snakeBodyPrefab: {fileID: 4302744947579623220, guid: 80b08e496ff87e84684039b20430a187, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
