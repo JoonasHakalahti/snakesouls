@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// MarkerManager jäljittää käärmeen osien sijainnin, jolloin käärmeen osat seuraavat ensimmäistä osaa.
 public class MarkerManager : MonoBehaviour
 {
-    public class Marker{
+    public class Marker
+    {
         public Vector3 position;
         public Quaternion rotation;
 
-        public Marker(Vector3 pos, Quaternion rot){
+        public Marker(Vector3 pos, Quaternion rot)
+        {
             position = pos;
             rotation = rot;
         }
@@ -17,24 +18,30 @@ public class MarkerManager : MonoBehaviour
 
     public List<Marker> markerList = new List<Marker>();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float markerInterval = 0.05f; 
+    private float markerTimer = 0f;
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        UpdateMarkerList();
+        markerTimer += Time.fixedDeltaTime;
+        if (markerTimer >= markerInterval)
+        {
+            UpdateMarkerList();
+            markerTimer = 0f;
+        }
     }
 
-    public void UpdateMarkerList(){
+    public void UpdateMarkerList()
+    {
         markerList.Add(new Marker(transform.position, transform.rotation));
+        if (markerList.Count > 50)
+        {
+            markerList.RemoveAt(0);
+        }
     }
 
-    public void ClearMarkerList(){
+    public void ClearMarkerList()
+    {
         markerList.Clear();
-        markerList.Add(new Marker(transform.position, transform.rotation));
     }
 }
