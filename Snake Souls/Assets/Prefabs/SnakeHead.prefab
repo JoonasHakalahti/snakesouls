@@ -154,7 +154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1038787087480827165
 RectTransform:
   m_ObjectHideFlags: 0
@@ -520,8 +520,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverText: {fileID: 6793807291237411196}
-  RestartButton: {fileID: 8801385784669571533}
-  MainMenuButton: {fileID: 5174605118842010221}
   eatSound: {fileID: 8300000, guid: 2a01653ebdbe9494e825e0bf11e31646, type: 3}
 --- !u!58 &1442297755653391760
 CircleCollider2D:
@@ -674,7 +672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &880522508683059207
 RectTransform:
   m_ObjectHideFlags: 0
@@ -882,8 +880,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverText: {fileID: 6793807291237411196}
-  RestartButton: {fileID: 8801385784669571533}
-  MainMenuButton: {fileID: 5174605118842010221}
   eatSound: {fileID: 0}
 --- !u!1 &8184093442759098521
 GameObject:
@@ -1038,7 +1034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9097069436841391886
 RectTransform:
   m_ObjectHideFlags: 0
