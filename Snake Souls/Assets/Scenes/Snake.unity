@@ -988,6 +988,7 @@ MonoBehaviour:
   GameOverText: {fileID: 0}
   RestartButton: {fileID: 0}
   MainMenuButton: {fileID: 0}
+  eatSound: {fileID: 0}
 --- !u!1 &1390627075
 GameObject:
   m_ObjectHideFlags: 0

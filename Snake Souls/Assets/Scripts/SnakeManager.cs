@@ -38,7 +38,9 @@ public class SnakeManager : MonoBehaviour
         float offset = 0.1f; //offset, jotta collision ei tule luodessa kehon osaa.
         spawnPosition += lastPart.transform.up * offset;
         GameObject newBodyPart = Instantiate(snakeBodyPrefab, spawnPosition, lastPart.transform.rotation);
+
         newBodyPart.name = $"BodyPart{snakeBody.Count}";
+
         snakeBody.Add(newBodyPart);
     }
 
@@ -61,7 +63,8 @@ public class SnakeManager : MonoBehaviour
             GameObject currentPart = snakeBody[i];
             Vector3 targetPosition = previousPart.transform.position - previousPart.transform.right * distanceBetween;
             currentPart.transform.position = Vector3.Lerp(currentPart.transform.position, targetPosition, 0.1f);
-            currentPart.transform.rotation = Quaternion.Lerp(currentPart.transform.rotation, previousPart.transform.rotation, 0.1f);
+            Quaternion targetRotation = previousPart.transform.rotation; 
+            currentPart.transform.rotation = Quaternion.Lerp(currentPart.transform.rotation, targetRotation, 0.1f);
         }
     }
 
