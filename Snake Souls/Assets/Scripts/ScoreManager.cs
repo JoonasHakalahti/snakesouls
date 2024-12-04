@@ -27,7 +27,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = $"Game Over! <br> Your Score: {score}";
+            scoreText.text = $"Score: {score}";
         }
     }
 }
