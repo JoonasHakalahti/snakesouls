@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SnakeSoul_icon_0: -8991985628882378925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

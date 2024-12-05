@@ -7,6 +7,6 @@ public class Food : MonoBehaviour
     // Palauttaa ruuan pisteet
     public int GetPoints()
     {
-        return points;
+        return points * 20;
     }
 }

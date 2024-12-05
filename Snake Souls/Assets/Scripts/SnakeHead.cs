@@ -2,6 +2,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class SnakeHead : MonoBehaviour
 {
@@ -86,7 +87,16 @@ public class SnakeHead : MonoBehaviour
     private void RestartGame()
     {
         Time.timeScale = 1; // Palauta pelin aika normaaliksi
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Lataa nykyinen scene uudelleen
+        ScoreManager.Instance.ResetScore(); // Nollaa pisteet
+        SceneManager.LoadScene("Snake"); // Lataa nykyinen scene uudelleen
+        SceneManager.sceneLoaded += OnsceneLoaded; // Liitä OnSceneLoaded-metodi sceneLoaded-tapahtumaan
+    }
+    private void OnsceneLoaded(Scene scene, LoadSceneMode mode){
+        var newScoreText = GameObject.FindWithTag("ScoreText")?.GetComponent<TMP_Text>();
+        if (newScoreText != null)
+        {
+            ScoreManager.Instance.SetSnakeSceneScoreText(newScoreText);
+        }
     }
 
     private void MainMenu()

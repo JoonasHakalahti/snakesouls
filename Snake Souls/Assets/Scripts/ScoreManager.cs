@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -15,17 +17,24 @@ public class ScoreManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            
         }
         else
         {
             Destroy(gameObject);
         }
     }
-
+    
     public void AddScore(int points)
     {
         score += points;
         UpdateSnakeSceneScore(); // Päivitä Snake Scenen pisteet reaaliajassa
+    }
+
+    public void ResetScore()
+    {
+        score = 0; // Nollataan pisteet
+        UpdateSnakeSceneScore(); // Päivitetään tekstikenttä
     }
 
     public int GetScore()
