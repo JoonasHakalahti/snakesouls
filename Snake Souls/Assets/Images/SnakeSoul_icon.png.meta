@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e45cdfe39a7e09248b66da2d49088f35
+guid: a95c7ba89d2039e42b4443b37f2b15d7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3591086009012542491
-    second: Food_05_0
+      213: -8991985628882378925
+    second: SnakeSoul_icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Food_05_0
+      name: SnakeSoul_icon_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 78
-        width: 888
-        height: 822
+        x: 46
+        y: 56
+        width: 978
+        height: 950
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1c5115e2b916d130800000000000000
-      internalID: 3591086009012542491
+      spriteID: 35f5c0d46bc063380800000000000000
+      internalID: -8991985628882378925
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Food_05_0: 3591086009012542491
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

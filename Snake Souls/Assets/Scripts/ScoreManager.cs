@@ -3,19 +3,29 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    private int score = 0; // Nykyiset pisteet
+    public static ScoreManager Instance;
 
-    [SerializeField] private TextMeshProUGUI scoreText; // Viittaus UI-tekstikenttään
+    private int score = 0;
 
-    void Start()
+    [SerializeField] private TMP_Text snakeSceneScoreText; // Viittaus Snake Scenen TMP-tekstiin
+
+    private void Awake()
     {
-        UpdateScoreUI(); // Päivitä UI alussa
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void AddScore(int points)
     {
         score += points;
-        UpdateScoreUI(); // Päivitä UI
+        UpdateSnakeSceneScore(); // Päivitä Snake Scenen pisteet reaaliajassa
     }
 
     public int GetScore()
@@ -23,11 +33,26 @@ public class ScoreManager : MonoBehaviour
         return score;
     }
 
-    private void UpdateScoreUI()
+    public void UpdateInputField(TMP_InputField inputField)
     {
-        if (scoreText != null)
+        if (inputField != null)
         {
-            scoreText.text = $"Score: {score}";
+            inputField.text = score.ToString();
+        }
+    }
+
+    // Päivitä Snake Scenessä näkyvä TMP-teksti
+    public void SetSnakeSceneScoreText(TMP_Text scoreText)
+    {
+        snakeSceneScoreText = scoreText;
+        UpdateSnakeSceneScore(); // Päivitä teksti heti kun se on asetettu
+    }
+
+    private void UpdateSnakeSceneScore()
+    {
+        if (snakeSceneScoreText != null)
+        {
+            snakeSceneScoreText.text = $"{score}";
         }
     }
 }

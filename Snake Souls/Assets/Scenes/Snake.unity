@@ -590,10 +590,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1390627079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -21.595032, y: -22.094}
-  m_SizeDelta: {x: -695.279, y: 84.839}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1.5400085, y: -22.093994}
+  m_SizeDelta: {x: -690.283, y: -335.161}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695775243
 MonoBehaviour:
@@ -794,12 +794,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 34738e1c761262e4eb58878a665143a9, type: 3}
-  m_Resource: {fileID: 8300000, guid: 34738e1c761262e4eb58878a665143a9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3e2c2d3dec7d32a44a1c5bd70108eae2, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3e2c2d3dec7d32a44a1c5bd70108eae2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.102
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1083,8 +1083,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 499711663}
   - {fileID: 695775242}
+  - {fileID: 499711663}
   - {fileID: 1805023873}
   - {fileID: 69527484}
   - {fileID: 1814899558}
@@ -1834,7 +1834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104510d1bed5fad4e84f5260a186ed62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1427559373}
+  snakeSceneScoreText: {fileID: 1427559373}
 --- !u!4 &2038712615
 Transform:
   m_ObjectHideFlags: 0
